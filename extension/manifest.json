@@ -1,0 +1,32 @@
+{
+  "name": "СДО РГСУ: Перезагрузка",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Расширение и улучшение функционирования проекта СДО для колледжа РГСУ",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "scripts": ["src/background.js"],
+    "persistent": true
+  },
+  "page_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "СДО РГСУ: Перезагрузка",
+    "default_popup": "popups/popup.disabled.html"
+  },
+  "permissions": ["https://sdo.rgsu.net/*"],
+
+  "content_scripts": [
+    {
+      "matches": ["https://sdo.rgsu.net/*"],
+      "css": ["src/inject.css"]
+    },
+    {
+      "matches": ["https://sdo.rgsu.net/*"],
+      "js": ["src/inject.js"]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+.tests-preview {
+  position: absolute !important;
+  top: -7px;
+  right: -106px;
+}
+
+.tests-file-list__item {
+  position: relative;
+}
