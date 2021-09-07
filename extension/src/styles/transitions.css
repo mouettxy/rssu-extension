@@ -1,0 +1,15 @@
+.slide-bottom-transition-enter-active {
+  animation: slide-in-bottom var(--duration-default) var(--easing-default) both;
+}
+
+.slide-bottom-transition-leave-active {
+  animation: slide-out-bottom var(--duration-default) var(--easing-default) both;
+}
+
+.fade-transition-enter-active {
+  animation: fade-in var(--duration-default) var(--easing-default) both;
+}
+
+.fade-transition-leave-active {
+  animation: fade-out var(--duration-default) var(--easing-default) both;
+}
