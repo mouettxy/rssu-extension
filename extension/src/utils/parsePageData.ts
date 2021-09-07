@@ -106,7 +106,7 @@ export function mapDatasetToElement(
   file: ParsedBlockFile
 ) {
   element.dataset.userName = block.name;
-  element.dataset.publishData = block.date;
+  element.dataset.publishDate = block.date;
   element.dataset.publishTime = block.time;
   element.dataset.fileText = file.text;
   element.dataset.fileExtension = file.extension;

@@ -7,7 +7,7 @@ const props = defineProps({
     required: true,
     type: String
   },
-  publishData: {
+  publishDate: {
     required: true,
     type: String
   },
