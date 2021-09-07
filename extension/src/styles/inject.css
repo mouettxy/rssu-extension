@@ -1,6 +1,8 @@
 :root {
   --color-white: #fafafa;
   --color-gray: #d2d2d2;
+  --color-brand: #0067a4;
+  --color-brand-light: #0ca4ff;
 
   --shadow-focus: 0 0 0 0.2rem rgb(0 123 255 / 25%);
 
@@ -13,8 +15,8 @@
 
 .tests-preview {
   position: absolute !important;
-  top: -7px;
-  right: -106px;
+  top: -4px;
+  right: -112px;
 }
 
 .tests-file-list__item {
