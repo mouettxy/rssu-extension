@@ -31,8 +31,6 @@ export async function getManifest() {
       128: './assets/icon-192.png',
     },
     permissions: [
-      'tabs',
-      'activeTab',
       'https://sdo.rgsu.net/*',
     ],
     content_scripts: [{
