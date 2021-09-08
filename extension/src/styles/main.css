@@ -1,0 +1,26 @@
+:root {
+  --duration-default: 0.3s;
+  --easing-default: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  padding: 0;
+}
+
+.icon-btn {
+  @apply inline-block cursor-pointer select-none
+    opacity-75 transition duration-200 ease-in-out
+    hover:opacity-100;
+  font-size: 0.9em;
+}
+
+.tests-preview {
+  @apply absolute -top-[4px] -right-[112px];
+}
+
+.tests-file-list__item {
+  @apply relative;
+}
