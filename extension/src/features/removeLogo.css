@@ -1,0 +1,7 @@
+#logo.block {
+  @apply hidden;
+}
+
+#header {
+  @apply h-auto;
+}

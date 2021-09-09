@@ -14,6 +14,7 @@ export default defineConfig({
           r('src/contentScripts/**/*'),
           r('src/components/**/*'),
           r('src/logic/**/*'),
+          r('src/features/**/*'),
         ],
       }
       : undefined,

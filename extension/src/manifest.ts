@@ -33,10 +33,19 @@ export async function getManifest() {
     permissions: [
       'https://sdo.rgsu.net/*',
     ],
-    content_scripts: [{
-      matches: ['https://sdo.rgsu.net/*'],
-      js: ['./dist/contentScripts/index.global.js'],
-    }],
+    content_scripts: [
+      {
+        matches: ['https://sdo.rgsu.net/*'],
+        js: ['./dist/inject/index.global.js'],
+        run_at: 'document_start',
+        all_frames: true,
+      },
+      {
+        matches: ['https://sdo.rgsu.net/*'],
+        js: ['./dist/contentScripts/index.global.js'],
+        run_at: 'document_end',
+      },
+    ],
     web_accessible_resources: [
       'dist/contentScripts/style.css',
     ],

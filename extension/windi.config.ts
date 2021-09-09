@@ -17,6 +17,7 @@ export default defineConfig({
       50: 1050,
     },
     colors: {
+      transparent: 'transparent',
       brand: {
         DEFAULT: '#0066CC',
         light: '#007FFF',
