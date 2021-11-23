@@ -14,14 +14,11 @@ FROM node:alpine as builder
 
 WORKDIR /usr/app
 
-COPY package.json .
-COPY yarn.lock .
-COPY tsconfig.json .
+COPY package.json yarn.lock tsconfig.json .
 COPY src src
 COPY --from=base /usr/app/node_modules /usr/app/node_modules
 
-RUN yarn build
-RUN yarn install --pure-lockfile --production
+RUN yarn build && yarn install --pure-lockfile --production
 
 # Start the app
 FROM node:alpine as app

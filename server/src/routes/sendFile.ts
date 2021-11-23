@@ -12,6 +12,9 @@ export const getFile = async (
   req: FastifyRequest,
   res: FastifyReply<ServerResponse>
 ): Promise<void> => {
+  res.header('Access-Control-Allow-Origin', 'sdo.rgsu.net');
+  res.header('Access-Control-Allow-Methods', 'GET');
+
   const stream = createReadStream(getFileLocation(req.query.url));
 
   res
