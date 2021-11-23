@@ -1,20 +1,19 @@
 import fastify, { FastifyInstance } from 'fastify';
-import cors from 'fastify-cors';
+// import cors from 'fastify-cors';
 import helmet from 'fastify-helmet';
 
 import config from './config';
-import health from './routes/health';
-import greetings from './routes/greetings';
+import uploadFile from './routes/uploadFile';
+import sendFile from './routes/sendFile';
 
 export const configureServer = (): FastifyInstance => {
   const server = fastify({ logger: config.logger, genReqId: config.genReqId });
 
-  // Register middleware
-  server.register(cors);
+  // server.register(cors);
   server.register(helmet);
 
-  // Register/mount route(s)
-  server.register(health);
-  server.register(greetings, { prefix: '/v1' });
+  server.register(uploadFile, { prefix: '/v1' });
+  server.register(sendFile, { prefix: '/v1' });
+
   return server;
 };
