@@ -11,9 +11,6 @@ export const uploadFile = async (
   req: FastifyRequest,
   reply: FastifyReply<ServerResponse>
 ): Promise<void> => {
-  reply.header('Access-Control-Allow-Origin', 'sdo.rgsu.net');
-  reply.header('Access-Control-Allow-Methods', 'POST');
-
   try {
     await downloadFile(req.body.url, req.body.session);
 
