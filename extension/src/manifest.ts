@@ -36,12 +36,6 @@ export async function getManifest() {
     content_scripts: [
       {
         matches: ['https://sdo.rgsu.net/*'],
-        js: ['./dist/inject/index.global.js'],
-        run_at: 'document_start',
-        all_frames: true,
-      },
-      {
-        matches: ['https://sdo.rgsu.net/*'],
         js: ['./dist/contentScripts/index.global.js'],
         run_at: 'document_end',
       },
