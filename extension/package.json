@@ -1,7 +1,7 @@
 {
   "name": "rssu-sdo-reload",
   "displayName": "РГСУ СДО: Перезагрузка",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Расширение и улучшение функционирования проекта СДО для колледжа РГСУ",
   "private": true,
   "scripts": {
