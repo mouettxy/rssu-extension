@@ -1,6 +1,3 @@
 import './main.css'
 import './transitions.css'
-import '../features/removeLogo.css'
-import '../features/removeHelp.css'
-import '../features/removeSearch.css'
 import 'virtual:windi.css'
