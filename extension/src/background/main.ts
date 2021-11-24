@@ -5,12 +5,13 @@ if (import.meta.hot) {
   import('./contentScriptHMR')
 }
 
-// @ts-ignore
-browser.runtime.onMessage.addListener((request: any, sender: any, sendResponse: any) => {
-  if (request.method === 'getLocalStorage')
-    sendResponse({ data: localStorage.getItem(request.key) })
-  else
-    sendResponse({}) // snub them.
+browser.runtime.onMessage.addListener((request: any) => {
+  return new Promise((resolve) => {
+    if (request.method === 'getLocalStorage')
+      resolve({ data: localStorage.getItem(request.key) })
+    else
+      resolve({})
+  })
 })
 
 browser.runtime.onInstalled.addListener((): void => {
