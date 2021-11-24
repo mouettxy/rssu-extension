@@ -3,6 +3,7 @@
   "displayName": "РГСУ СДО: Перезагрузка",
   "version": "0.0.2",
   "description": "Расширение и улучшение функционирования проекта СДО для колледжа РГСУ",
+  "author": "Nick Chaykovsky <lis@chaikovskie.com>",
   "private": true,
   "scripts": {
     "dev": "npm run clear && cross-env NODE_ENV=development run-p dev:*",

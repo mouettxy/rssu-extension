@@ -1,9 +1,9 @@
 {
   "name": "sdo-rssu-reload-server",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "main": "build/index.js",
-  "license": "MIT",
   "author": "Nick Chaykovsky <lis@chaikovskie.com>",
+  "private": true,
   "scripts": {
     "build": "tsc",
     "format": "prettier --write '**/*.{ts,js}'",
