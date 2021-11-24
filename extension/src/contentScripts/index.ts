@@ -128,8 +128,10 @@ styleEl.setAttribute('rel', 'stylesheet')
 styleEl.setAttribute('href', browser.runtime.getURL('dist/contentScripts/style.css'))
 document.documentElement.appendChild(styleEl)
 
-document.addEventListener('DOMContentLoaded', () => {
-  setupPreviewButtons(App)
+document.onreadystatechange = () => {
+  if (document.readyState === 'complete') {
+    setupPreviewButtons(App)
 
-  console.info('[rssu-sdo-reload] Markup generated!')
-})
+    console.info('[rssu-sdo-reload] Markup generated!')
+  }
+}
