@@ -11,7 +11,9 @@ export function previewId() {
   let previewId = `preview-btn-${id}`
 
   return {
-    getId() { return previewId },
+    getId() {
+      return previewId
+    },
     nextId() {
       id++
       previewId = `preview-btn-${id}`
@@ -22,14 +24,13 @@ export function previewId() {
 }
 
 export function setupPreviewButtons(App: any) {
-  const allowedExtensions = ['pdf', 'jpg', 'png', 'jpeg']
+  const allowedExtensions = ['pdf', 'jpg', 'png', 'jpeg', 'docx']
 
   const pageBlocks = parsePage()
 
   pageBlocks.forEach((block) => {
     block.files.forEach((file) => {
-      if (!allowedExtensions.includes(file.extension))
-        return
+      if (!allowedExtensions.includes(file.extension)) return
 
       const root = document.createElement('div')
       file.node.classList.add('tests-file-list__item')

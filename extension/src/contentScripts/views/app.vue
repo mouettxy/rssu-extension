@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import '../../styles'
+import '~/styles'
+import FileViewerImage from '~/components/file-viewer-image.vue'
 
 const props = defineProps({
   userName: {
@@ -32,8 +33,6 @@ const props = defineProps({
   },
 })
 
-const fileDefaultLink = props.fileLink.replace('/download/1', '')
-
 const isPdf = computed(() => {
   return ['pdf'].includes(props.fileExtension)
 })
@@ -42,20 +41,43 @@ const isImage = computed(() => {
   return ['png', 'jpg', 'jpeg'].includes(props.fileExtension)
 })
 
-const fileCaption = computed(() => {
-  return `${props.userName} ${props.publishDate} | ${props.publishTime}`
+const isOffice = computed(() => {
+  return ['docx'].includes(props.fileExtension)
 })
-
-const modal = ref(false)
 </script>
 
 <template>
-  <base-btn v-if="isPdf" tag="a" :href="fileDefaultLink" :title="fileCaption" target="_blank">
+  <file-viewer-image v-if="isImage" :file-link="fileLink" />
+  <file-viewer-office v-else-if="isOffice" :file-link="fileLink" />
+  <file-viewer-office v-else-if="isPdf" :file-link="fileLink" />
+  <!-- <base-btn
+    v-if="isPdf"
+    tag="a"
+    :href="fileDefaultLink"
+    :title="fileCaption"
+    target="_blank"
+  >
     Предпросмотр
+  </base-btn>
+  <base-btn v-else-if="isEmbed" @click="modal = !modal">
+    Предпросмотр Word
   </base-btn>
   <base-btn v-else @click="modal = !modal">
     Предпросмотр
   </base-btn>
 
-  <image-modal v-if="isImage" v-model="modal" :file-link="fileLink" :file-name="fileName" :caption="fileCaption" />
+  <image-modal
+    v-if="isImage"
+    v-model="modal"
+    :file-link="fileLink"
+    :file-name="fileName"
+    :caption="fileCaption"
+  />
+  <doc-modal
+    v-if="isEmbed"
+    v-model="modal"
+    :file-link="fileLink"
+    :file-name="fileName"
+    :caption="fileCaption"
+  /> -->
 </template>
