@@ -1,6 +1,6 @@
 {
   "name": "sdo-rssu-reload-server",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "build/index.js",
   "author": "Nick Chaykovsky <lis@chaikovskie.com>",
   "private": true,
