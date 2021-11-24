@@ -50,34 +50,4 @@ const isOffice = computed(() => {
   <file-viewer-image v-if="isImage" :file-link="fileLink" />
   <file-viewer-office v-else-if="isOffice" :file-link="fileLink" />
   <file-viewer-office v-else-if="isPdf" :file-link="fileLink" />
-  <!-- <base-btn
-    v-if="isPdf"
-    tag="a"
-    :href="fileDefaultLink"
-    :title="fileCaption"
-    target="_blank"
-  >
-    Предпросмотр
-  </base-btn>
-  <base-btn v-else-if="isEmbed" @click="modal = !modal">
-    Предпросмотр Word
-  </base-btn>
-  <base-btn v-else @click="modal = !modal">
-    Предпросмотр
-  </base-btn>
-
-  <image-modal
-    v-if="isImage"
-    v-model="modal"
-    :file-link="fileLink"
-    :file-name="fileName"
-    :caption="fileCaption"
-  />
-  <doc-modal
-    v-if="isEmbed"
-    v-model="modal"
-    :file-link="fileLink"
-    :file-name="fileName"
-    :caption="fileCaption"
-  /> -->
 </template>
