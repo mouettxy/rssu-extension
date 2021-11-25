@@ -1,7 +1,7 @@
 {
   "name": "rssu-sdo-reload",
   "displayName": "РГСУ СДО: Перезагрузка",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Расширение и улучшение функционирования проекта СДО для колледжа РГСУ",
   "author": "Nick Chaykovsky <lis@chaikovskie.com>",
   "private": true,
