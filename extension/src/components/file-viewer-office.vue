@@ -43,6 +43,7 @@ onMounted(async() => {
     if (fileRef.value?.$el) {
       lightGallery(fileRef.value?.$el, {
         selector: 'this',
+        licenseKey: '70B46ADB-047940DB-BE224A1D-5E369A7C',
       })
     }
   })
